@@ -19,6 +19,7 @@
 
 #include <ESP8266WiFi.h>
 #include <MD_MAX72xx.h>
+#include "environment.h"
 #include <SPI.h>
 
 #define PRINT_CALLBACK  0
@@ -55,8 +56,8 @@ MD_MAX72XX mx = MD_MAX72XX(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 //MD_MAX72XX mx = MD_MAX72XX(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
 
 // WiFi login parameters - network name and password
-const char* ssid = "";
-const char* password = "";
+const char* ssid = SSID;
+const char* password = PASSWORD;
 // const char* ssid = "B535_FD4B";
 // const char* password = "3Y567gn7HY9";
 
